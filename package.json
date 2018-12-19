@@ -1,0 +1,16 @@
+{
+  "name": "@axel669/immutable-update",
+  "version": "0.1.0",
+  "description": "",
+  "main": "update.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@axel669/teascript": "^0.11.0",
+    "rollup": "^0.68.0"
+  }
+}
