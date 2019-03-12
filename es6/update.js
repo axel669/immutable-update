@@ -1,5 +1,3 @@
-'use strict';
-
 const actions = {
     $set: (source, value) => value,
     $unset: (source, names) => {
@@ -67,4 +65,4 @@ const update = (source, obj, createIfUndefined = false) =>
     );
 update.actions = actions;
 
-module.exports = update;
+export default update;

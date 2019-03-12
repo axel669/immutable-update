@@ -22,6 +22,9 @@ var immutableUpdate = (function () {
         })
     };
     const internal_copyObject = (obj, createIfVoid = false) => {
+        if (Array.isArray(obj) === true) {
+            return [...obj];
+        }
         if (obj === undefined && createIfVoid === true) {
             return {};
         }

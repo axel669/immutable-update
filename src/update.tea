@@ -16,7 +16,7 @@ let actions = {
 
 let internal_copyObject = (obj, createIfVoid = false) => {
     if Array.isArray(obj) == true {
-        [...obj]
+        return [...obj]
     }
     if obj == void && createIfVoid == true {
         return {}

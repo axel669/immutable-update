@@ -10,7 +10,11 @@ export default {
         {
             format: "iife",
             name: "immutableUpdate",
-            file: "browser/update.js"
+            file: "standalone/update.js"
+        },
+        {
+            format: "es",
+            file: "es6/update.js"
         }
     ],
     plugins: [

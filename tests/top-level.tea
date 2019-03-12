@@ -1,0 +1,18 @@
+let update = require("../update.js")
+
+let source = [0...10]
+let dest = update(source, {"0.$set": 10})
+
+console.log(source)
+console.log(dest)
+console.log(source == dest)
+
+let source2 = {
+    a: 1
+    b: 2
+}
+let dest2 = update(source2, {"a.$set": 10})
+
+console.log(source2)
+console.log(dest2)
+console.log(source2 == dest2)
