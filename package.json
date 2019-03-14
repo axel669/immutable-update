@@ -1,6 +1,6 @@
 {
   "name": "@axel669/immutable-update",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "update.js",
   "scripts": {
@@ -9,8 +9,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@axel669/teascript": "^0.14.4",
-    "rollup": "^0.68.0"
+    "rollup": "^0.68.2"
   }
 }
