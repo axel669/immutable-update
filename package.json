@@ -8,7 +8,7 @@
     "build": "rollup -c"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@axel669/teascript": "^0.14.4",
