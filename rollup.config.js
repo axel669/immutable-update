@@ -5,7 +5,7 @@ export default {
     output: [
         {
             format: "cjs",
-            file: "update.js"
+            file: "index.js"
         },
         {
             format: "iife",
@@ -14,7 +14,7 @@ export default {
         },
         {
             format: "es",
-            file: "es6/update.js"
+            file: "es6/index.js"
         }
     ],
     plugins: [

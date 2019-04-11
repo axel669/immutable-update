@@ -1,6 +1,6 @@
 {
   "name": "@axel669/immutable-update",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "",
   "main": "update.js",
   "scripts": {
@@ -13,5 +13,10 @@
   "devDependencies": {
     "@axel669/teascript": "^0.14.4",
     "rollup": "^0.68.2"
-  }
+  },
+  "files": [
+    "index.js",
+    "/es6",
+    "/standalone"
+  ]
 }
