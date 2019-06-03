@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jasmine tests/**/test*.js --reporter=@axel669/jasmine-basic-reporter --random=false",
     "test2": "jasmine tests/**/test*.js",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "benchmark": "node tests/benchmark.js"
   },
   "author": "",
   "license": "MIT",
