@@ -6,7 +6,7 @@ const source = {a: 10, b: 12, c: 14}
 const updates = {
     "a.$set": 100,
     "b.$set": [1, 2],
-    "d.e.$set": "LUL"
+    "d..e.$set": "LUL"
 }
 
 const lim = 10000n
