@@ -1,7 +1,5 @@
-import tea from "@axel669/teascript/rollup";
-
 export default {
-    input: "src/update.tea",
+    input: "src/update.js",
     output: [
         {
             format: "cjs",
@@ -14,12 +12,9 @@ export default {
         },
         {
             format: "es",
-            file: "es6/index.js"
+            file: "esm/index.js"
         }
     ],
     plugins: [
-        tea({
-            include: "src/**.tea"
-        })
     ]
 };
