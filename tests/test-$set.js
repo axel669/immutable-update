@@ -20,6 +20,22 @@ describe("$set", () => {
                     topArray: [1, 2, 3]
                 })
         })
+        it("update array", () => {
+            const updated = update(
+                source,
+                {"topArray.2.$set": 5}
+            )
+
+            expect(updated)
+                .toEqual({
+                    top: 10,
+                    nested: {
+                        value: 1,
+                        array: [4, 5, 6]
+                    },
+                    topArray: [1, 2, 5]
+                })
+        })
         it("create", () => {
             const updated = update(
                 source,
@@ -53,6 +69,22 @@ describe("$set", () => {
                     nested: {
                         value: 5,
                         array: [4, 5, 6]
+                    },
+                    topArray: [1, 2, 3]
+                })
+        })
+        it("update array", () => {
+            const updated = update(
+                source,
+                {"nested.array.1.$set": 2}
+            )
+
+            expect(updated)
+                .toEqual({
+                    top: 10,
+                    nested: {
+                        value: 1,
+                        array: [4, 2, 6]
                     },
                     topArray: [1, 2, 3]
                 })
