@@ -54,7 +54,6 @@ const internal_setValues = (dest, key, n, value, create) => {
     return dest
 }
 
-// const keySplitRegex = /(?<!\.)\.(?!\.)/
 const splitKey = key => key
     .split(/(?<!\.)\.(?!\.)/)
     .map(part => part.replace(/\.\./g, "."))
@@ -63,7 +62,6 @@ const update = (source, obj, createIfUndefined = false) => Object.keys(obj)
         (source, key) => internal_setValues(
             source,
             splitKey(key),
-            // key.split("."),
             0,
             obj[key],
             createIfUndefined
@@ -86,11 +84,10 @@ update.expand = (...sources) => sources.reduce(
     },
     {}
 )
-update.seq = (source, ...updates) => update.reduce(
+update.seq = (source, ...updates) => updates.reduce(
     (source, [update, value, createIfVoid = false]) => internal_setValues(
         source,
         splitKey(update),
-        // update.split("."),
         0,
         value,
         createIfVoid
