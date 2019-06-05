@@ -18,6 +18,8 @@ describe("$unset", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
 
         it("multiple props", () => {
@@ -30,6 +32,8 @@ describe("$unset", () => {
                 .toEqual({
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
     })
 
@@ -48,6 +52,8 @@ describe("$unset", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
 
         it("multiple props", () => {
@@ -62,6 +68,8 @@ describe("$unset", () => {
                     nested: {},
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
     })
 })

@@ -23,6 +23,8 @@ describe("escaped", () => {
                 ...source,
                 "top.test": 100
             })
+        expect(source === updated)
+            .toBe(false)
     })
 
     it("nested", () => {
@@ -46,6 +48,8 @@ describe("escaped", () => {
                     "wat.woah": 6.28
                 }
             })
+        expect(source === updated)
+            .toBe(false)
     })
 
     it("$unset", () => {
@@ -64,5 +68,7 @@ describe("escaped", () => {
                     "wat.woah": 3.14
                 }
             })
+        expect(source === updated)
+            .toBe(false)
     })
 })

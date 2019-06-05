@@ -12,5 +12,7 @@ describe("seq", () => {
 
         expect(updated)
             .toEqual({a: 2, b: 3})
+        expect(source === updated)
+            .toBe(false)
     })
 })

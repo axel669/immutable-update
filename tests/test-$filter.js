@@ -12,6 +12,8 @@ describe("$filter", () => {
 
         expect(updated)
             .toEqual([10, 8])
+        expect(source === updated)
+            .toBe(false)
     })
 
     it("top level", () => {
@@ -25,6 +27,8 @@ describe("$filter", () => {
                 ...source,
                 topArray: [1, 3]
             })
+        expect(source === updated)
+            .toBe(false)
     })
     it("nested", () => {
         const updated = update(
@@ -41,5 +45,7 @@ describe("$filter", () => {
                 },
                 topArray: [1, 2, 3]
             })
+        expect(source === updated)
+            .toBe(false)
     })
 })

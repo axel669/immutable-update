@@ -19,6 +19,8 @@ describe("$set", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
         it("update array", () => {
             const updated = update(
@@ -35,6 +37,8 @@ describe("$set", () => {
                     },
                     topArray: [1, 2, 5]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
         it("create", () => {
             const updated = update(
@@ -53,6 +57,8 @@ describe("$set", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
     })
 
@@ -72,6 +78,8 @@ describe("$set", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
         it("update array", () => {
             const updated = update(
@@ -88,6 +96,8 @@ describe("$set", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
         it("create", () => {
             const updated = update(
@@ -108,6 +118,8 @@ describe("$set", () => {
                     },
                     topArray: [1, 2, 3]
                 })
+            expect(source === updated)
+                .toBe(false)
         })
     })
 })

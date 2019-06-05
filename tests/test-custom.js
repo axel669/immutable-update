@@ -15,6 +15,8 @@ describe("custom", () => {
                 ...source,
                 top: 100
             })
+        expect(source === updated)
+            .toBe(false)
     })
 
     it("nested", () => {
@@ -32,5 +34,7 @@ describe("custom", () => {
                 },
                 topArray: [1, 2, 3]
             })
+        expect(source === updated)
+            .toBe(false)
     })
 })
