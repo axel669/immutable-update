@@ -40,7 +40,7 @@ var immutableUpdate = (function () {
     };
 
     const internal_setValues = (dest, key, n, value, create) => {
-        let name = key[n];
+        const name = key[n];
         if (n === (key.length - 1)) {
             return actions[name](dest, value)
         }

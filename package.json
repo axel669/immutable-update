@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jasmine tests/**/test*.js --reporter=@axel669/jasmine-basic-reporter --random=false",
     "test2": "jasmine tests/**/test*.js",
-    "build": "rollup -c",
+    "build": "rollup -c && rollup -c rollup.min.config.js",
     "benchmark": "node tests/benchmark.js"
   },
   "author": "",
@@ -14,9 +14,9 @@
   "dependencies": {},
   "devDependencies": {
     "@axel669/jasmine-basic-reporter": "^1.1.0",
-    "@axel669/teascript": "^0.14.4",
     "jasmine": "^3.4.0",
-    "rollup": "^0.68.2"
+    "rollup": "^0.68.2",
+    "rollup-plugin-terser": "^5.0.0"
   },
   "files": [
     "index.js",
