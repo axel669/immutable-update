@@ -18,5 +18,19 @@ describe("custom", () => {
     })
 
     it("nested", () => {
+        const updated = update(
+            source,
+            {"nested.array.1.$pow": 3}
+        )
+
+        expect(updated)
+            .toEqual({
+                top: 10,
+                nested: {
+                    value: 1,
+                    array: [4, 125, 6]
+                },
+                topArray: [1, 2, 3]
+            })
     })
 })
