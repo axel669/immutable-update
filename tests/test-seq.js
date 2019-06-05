@@ -2,8 +2,9 @@ const update = require("../index.js")
 
 describe("seq", () => {
     it("keeps order", () => {
+        const source = {a: 1, b: 2}
         const updated = update.seq(
-            {a: 1, b: 2},
+            source,
             ["a.$apply", a => a + 3],
             ["a.$apply", a => a / 2],
             ["b.$apply", b => b + 7],
