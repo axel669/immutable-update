@@ -1,6 +1,6 @@
 {
   "name": "@axel669/immutable-update",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "",
   "main": "update.js",
   "scripts": {
