@@ -21,6 +21,7 @@
   "files": [
     "index.js",
     "/es6",
-    "/standalone"
+    "/standalone",
+    "/min"
   ]
 }
