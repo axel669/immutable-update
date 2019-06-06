@@ -22,6 +22,7 @@
     "index.js",
     "/es6",
     "/standalone",
-    "/min"
+    "/min",
+    "/esm"
   ]
 }
