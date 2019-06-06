@@ -1,11 +1,9 @@
-'use strict';
-
 const actions = {
     $set: (source, value) => value,
     $unset: (source, names) => {
-        const copy = {...source};
+        const copy = {...source}
         for (const name of names) {
-            delete copy[name];
+            delete copy[name]
         }
         return copy
     },
@@ -14,7 +12,7 @@ const actions = {
     $apply: (source, func) => func(source),
     $filter: (source, condition) => source.filter(condition),
     $merge: (source, addition) => ({...source, ...addition})
-};
+}
 
 const internal_copyObject = (obj, createIfVoid = false) => {
     if (Array.isArray(obj) === true) {
@@ -36,29 +34,29 @@ const internal_copyObject = (obj, createIfVoid = false) => {
         return obj
     }
     return {...obj}
-};
+}
 
 const internal_setValues = (dest, key, n, value, create) => {
-    const name = key[n];
+    const name = key[n]
     if (n === (key.length - 1)) {
         return actions[name](dest, value)
     }
     else {
-        dest = internal_copyObject(dest, create);
+        dest = internal_copyObject(dest, create)
         dest[name] = internal_setValues(
             dest[name],
             key,
             n + 1,
             value,
             create
-        );
+        )
     }
     return dest
-};
+}
 
 const splitKey = key => key
     .split(/(?<!\.)\.(?!\.)/)
-    .map(part => part.replace(/\.\./g, "."));
+    .map(part => part.replace(/\.\./g, "."))
 const update = (source, obj, createIfUndefined = false) => Object.keys(obj)
     .reduce(
         (source, key) => internal_setValues(
@@ -69,23 +67,23 @@ const update = (source, obj, createIfUndefined = false) => Object.keys(obj)
             createIfUndefined
         ),
         source
-    );
+    )
 
-update.actions = actions;
+update.actions = actions
 update.expand = (...sources) => sources.reduce(
     (dest, next) => {
         const updates = Object.entries(next)
             .reduce(
                 (u, [key, value]) => {
-                    u[`${key}.$set`] = value;
+                    u[`${key}.$set`] = value
                     return u
                 },
                 {}
-            );
+            )
         return update(dest, updates, true)
     },
     {}
-);
+)
 update.seq = (source, ...updates) => updates.reduce(
     (source, [update, value, createIfVoid = false]) => internal_setValues(
         source,
@@ -95,6 +93,6 @@ update.seq = (source, ...updates) => updates.reduce(
         createIfVoid
     ),
     source
-);
+)
 
-module.exports = update;
+export default update

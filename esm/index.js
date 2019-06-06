@@ -1,5 +1,3 @@
-'use strict';
-
 const actions = {
     $set: (source, value) => value,
     $unset: (source, names) => {
@@ -97,4 +95,4 @@ update.seq = (source, ...updates) => updates.reduce(
     source
 );
 
-module.exports = update;
+export default update;

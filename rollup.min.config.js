@@ -1,20 +1,23 @@
+import {terser} from "rollup-plugin-terser"
+
 export default {
     input: "src/update.js",
     output: [
         {
             format: "cjs",
-            file: "index.js"
+            file: "min/index.js"
         },
         {
             format: "iife",
             name: "immutableUpdate",
-            file: "standalone/update.js"
+            file: "standalone/update.min.js"
         },
         {
             format: "es",
-            file: "esm/index.js"
+            file: "esm/min/index.js"
         }
     ],
     plugins: [
+        terser()
     ]
-};
+}
