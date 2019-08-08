@@ -1,8 +1,8 @@
 {
   "name": "@axel669/immutable-update",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "update.js",
+  "main": "index.js",
   "scripts": {
     "test": "jasmine tests/**/test*.js --reporter=@axel669/jasmine-basic-reporter --random=false",
     "test2": "jasmine tests/**/test*.js",
