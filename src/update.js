@@ -41,16 +41,14 @@ const internal_setValues = (dest, key, n, value, create) => {
     if (n === (key.length - 1)) {
         return actions[name](dest, value)
     }
-    else {
-        dest = internal_copyObject(dest, create)
-        dest[name] = internal_setValues(
-            dest[name],
-            key,
-            n + 1,
-            value,
-            create
-        )
-    }
+    const dest = internal_copyObject(dest, create)
+    dest[name] = internal_setValues(
+        dest[name],
+        key,
+        n + 1,
+        value,
+        create
+    )
     return dest
 }
 
