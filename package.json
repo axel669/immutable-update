@@ -4,19 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine tests/**/test*.js --reporter=@axel669/jasmine-basic-reporter --random=false",
-    "test2": "jasmine tests/**/test*.js",
-    "build": "rollup -c && rollup -c rollup.min.config.js",
-    "benchmark": "node tests/benchmark.js"
+    "benchmark": "node tests/bench.mjs"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "@axel669/jasmine-basic-reporter": "^1.1.0",
-    "jasmine": "^3.4.0",
-    "rollup": "^0.68.2",
-    "rollup-plugin-terser": "^5.0.0"
+    "@axel669/aegis": "^0.2.5",
+    "benchmark": "^2.1.4",
+    "immutability-helper": "^3.1.1"
   },
   "files": [
     "index.js",
