@@ -15,7 +15,7 @@
   "devDependencies": {
     "@axel669/jasmine-basic-reporter": "^1.1.0",
     "jasmine": "^3.4.0",
-    "rollup": "^0.68.2",
+    "rollup": "^2.80.0",
     "rollup-plugin-terser": "^5.0.0"
   },
   "files": [
